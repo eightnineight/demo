@@ -1,0 +1,128 @@
+*,
+*:before,
+*:after {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: linear-gradient(20deg, #f87, #fb6);
+    background-repeat: no-repeat;
+}
+
+.app {
+    background-color: white;
+    max-width: 600px;
+    margin: 25px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@keyframes animation-top {
+    from {
+        transform: translate(0px, -50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+@keyframes animation-bottom {
+    from {
+        transform: translate(0px, 50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+@keyframes animation-left {
+    from {
+        transform: translate(-50px, 0px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+@keyframes animation-right {
+    from {
+        transform: translate(50px, 0px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.card {
+    position: relative;
+    border-radius: 20px;
+    margin: 20px 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px rgba(.7, .7, .7, .5);
+    animation-name: animation-left;
+    animation-duration: 2s;
+    animation-delay: .2s;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card__text {
+        position: absolute;
+        font-size: 50px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.card-animation-start {
+    animation-play-state: running;
+}
+
+.card-animation-top {
+    animation-name: animation-top;
+    animation-duration: 2s;
+    animation-delay: .2s;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+}
+.card-animation-bottom {
+    animation-name: animation-bottom;
+    animation-duration: 2s;
+    animation-delay: .2s;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+}
+.card-animation-left {
+    animation-name: animation-left;
+    animation-duration: 2s;
+    animation-delay: .2s;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+}
+.card-animation-right {
+    animation-name: animation-right;
+    animation-duration: 2s;
+    animation-delay: .2s;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+}
